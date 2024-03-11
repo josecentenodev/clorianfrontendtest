@@ -10,7 +10,7 @@ const {order, suborder, handleOrderChange, handleSuborderChange} = useOrderEvent
     <div>
     <RadioGroup
       value={order}
-      className="h-40 px-5 flex flex-col"
+      className="h-40 pr-5 flex flex-col"
       onValueChange={handleOrderChange}
     >
       <p>Order events by...</p>
@@ -38,7 +38,7 @@ const {order, suborder, handleOrderChange, handleSuborderChange} = useOrderEvent
     </RadioGroup>
     <RadioGroup
       value={suborder}
-      className="h-40 px-5 flex flex-col"
+      className="h-40 pr-5 flex flex-col"
       onValueChange={handleSuborderChange}
     >
       <div className="flex items-center space-x-2">

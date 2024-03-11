@@ -37,12 +37,12 @@ const EventCard = ({
   const { handleAddToCart, handleValueChange } = useCart(id, name, validityDate);
 
   return (
-    <Card id={`${id}`}>
+    <Card id={`${id}`} className='break-inside-avoid'>
       <CardHeader>
         <img
           src={imageUrl}
           alt={altImg}
-          className="max-w-96"
+          className="max-h-96"
         />
         <CardTitle>{name}</CardTitle>
         <CardDescription>{description}</CardDescription>
@@ -52,9 +52,6 @@ const EventCard = ({
           <h3 className="font-semibold text-2xl text-cyan-950">€ {cost}</h3>
           <p className="text-sm font-semibold text-cyan-800">
             Date: {validityDate}
-          </p>
-          <p className="text-xs text-cyan-600">
-            You can purchase up to 10 tickets.
           </p>
           <div>
             <Select onValueChange={handleValueChange}>

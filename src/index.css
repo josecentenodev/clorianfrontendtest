@@ -79,3 +79,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .masonry {
+    column-gap: 1.5em;
+    column-count: 2;
+  }
+  .masonry-sm {
+    column-gap: 1.5em;
+    column-count: 2;
+  }
+  .masonry-md {
+    column-gap: 1.5em;
+    column-count: 3;
+  }
+  .break-inside {
+    break-inside: avoid;
+  }
+}
