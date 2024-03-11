@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addToCart } from "@/redux/cartSlice";
+import { addToCart, removeFromCart } from "@/redux/cartSlice";
 import { useToast } from "@/components/ui/use-toast";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
@@ -46,13 +46,13 @@ const useCart = (id?: number, name?: string) => {
     }).filter((item): item is CartEvent => !!item);
   };
 
-
   const cartListtoEvents = fromCartStateToCartList(cartState);
 
   const handleValueChange = (value: string) => {
     const stringValueToNumber = Number(value);
     setQuantity(stringValueToNumber);
   };
+
   const handleAddToCart = () => {
     try {
       dispatch(addToCart({ productId: id, quantity: quantity }));
@@ -65,10 +65,23 @@ const useCart = (id?: number, name?: string) => {
     }
   };
 
+  const handleRemoveFromCart = () => {
+    try {
+      dispatch(removeFromCart(id))
+      return toast({
+        title: `Removed from cart:`,
+        description: `${name} removed`,
+      });
+    } catch (error) {
+      toast({ variant: "destructive", title: "Oops!", description: `${error}`});
+    }
+  }
+
   return {
     handleValueChange,
     handleAddToCart,
-    cartListtoEvents
+    cartListtoEvents,
+    handleRemoveFromCart
   };
 };
 

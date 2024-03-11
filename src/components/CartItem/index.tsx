@@ -1,3 +1,4 @@
+import useCart from "@/hooks/useCart";
 import { Button } from "../ui/button";
 
 interface CartEvent {
@@ -19,9 +20,7 @@ const CartItem = ({
   cost,
   quantity,
 }: CartEvent) => {
-    const handleRemoveFromCart = () => {
-        console.log(id)
-    }
+  const { handleRemoveFromCart } = useCart(id, name);
 
   return (
     <div className="flex w-[800px]">
@@ -41,13 +40,13 @@ const CartItem = ({
           <p className="text-cyan-800">{description}</p>
           <div className="flex justify-end w-full">
             <Button onClick={handleRemoveFromCart}>Remove</Button>
-        </div>
+          </div>
           <div className="flex justify-between">
-          <p className="text-cyan-800">Tickets: {quantity}</p>
+            <p className="text-cyan-800">Tickets: {quantity}</p>
 
-          <p className="self-end font-semibold text-cyan-900">
-            Total: € {quantity * cost}
-          </p>
+            <p className="self-end font-semibold text-cyan-900">
+              Total: € {quantity * cost}
+            </p>
           </div>
         </div>
       </div>
