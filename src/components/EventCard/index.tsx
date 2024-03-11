@@ -34,7 +34,7 @@ const EventCard = ({
   validityDate,
   cost,
 }: Event) => {
-  const { handleAddToCart, handleValueChange } = useCart(id, name, validityDate);
+  const { handleAddToCart, handleValueChange } = useCart(id, name);
 
   return (
     <Card id={`${id}`} className='break-inside-avoid'>

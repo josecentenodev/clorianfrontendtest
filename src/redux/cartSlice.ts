@@ -7,7 +7,7 @@ interface CartItem {
 
 const MAX_QUANTITY_PER_PRODUCT = 10;
 
-const initialState: CartItem[] = [];
+const initialState: CartItem[] = [{productId: 1, quantity: 5}, {productId: 5, quantity: 3}, {productId: 3, quantity: 1}];
 
 const cartSlice = createSlice({
   name: 'cart',
