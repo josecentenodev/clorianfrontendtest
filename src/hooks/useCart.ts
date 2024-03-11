@@ -20,7 +20,7 @@ interface CartEvent {
   quantity: number;
 }
 
-const useCart = (id: number, name: string) => {
+const useCart = (id?: number, name?: string) => {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(0);
   const { toast } = useToast();
