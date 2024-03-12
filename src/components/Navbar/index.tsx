@@ -8,7 +8,7 @@ const NavBar = () => {
     (state: RootState) => state.cart
   );
   return (
-    <nav className="w-full py-5 bg-cyan-600 text-white text-lg">
+    <nav className="w-full py-5 bg-sky-600 text-white text-lg">
       <div className="flex justify-between items-center container">
         <Logo />
         <ul className="flex justify-around font-bold w-56">

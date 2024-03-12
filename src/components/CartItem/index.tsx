@@ -23,8 +23,8 @@ const CartItem = ({
   const { handleRemoveFromCart } = useCart(id, name);
 
   return (
-    <div className="flex w-[800px]">
-      <div className="h-52 w-52 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+    <div className="flex xl:w-[700px] border-l-4 border-l-sky-500">
+      <div className="h-52 w-52 flex-shrink-0 overflow-hidden">
         <img
           src={imageUrl}
           alt={altImg}
@@ -32,19 +32,19 @@ const CartItem = ({
         />
       </div>
       <div className="px-2 w-full border-b flex flex-col">
-        <div className="flex justify-between gap-2 text-cyan-900">
+        <div className="flex justify-between gap-2 text-sky-900">
           <h3 className="font-semibold">{name}</h3>
           <p>€ {cost}</p>
         </div>
         <div className="flex flex-col gap-2 h-full justify-between">
-          <p className="text-cyan-800">{description}</p>
+          <p className="text-sky-800 max-w-80">{description}</p>
           <div className="flex justify-end w-full">
             <Button onClick={handleRemoveFromCart}>Remove</Button>
           </div>
           <div className="flex justify-between">
-            <p className="text-cyan-800">Tickets: {quantity}</p>
+            <p className="text-sky-800">Tickets: {quantity}</p>
 
-            <p className="self-end font-semibold text-cyan-900">
+            <p className="self-end font-semibold text-sky-900">
               Total: € {quantity * cost}
             </p>
           </div>

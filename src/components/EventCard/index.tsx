@@ -40,7 +40,6 @@ const EventCard = ({
 
   const [isDisabled, setIsDisabled] = useState(true);
 
-
   useEffect(() => {
     const currentDateISO = new Date().toISOString();
     const eventDateISO = new Date(validityDate).toISOString();
@@ -50,24 +49,29 @@ const EventCard = ({
   return (
     <Card
       id={`${id}`}
-      className="break-inside-avoid"
     >
       <CardHeader>
-        <img
-          src={imageUrl}
-          alt={altImg}
-          className="max-h-96"
-        />
+        <div className="h-64 w-64 mb-5 mx-auto flex-shrink-0 overflow-hidden rounded-md border border-gray-200 flex justify-center items-center">
+          <img
+            src={imageUrl}
+            alt={altImg}
+            className="h-full w-full object-cover object-center"
+          />
+        </div>
         <CardTitle>{name}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardFooter>
         <div className="flex flex-col gap-2">
-          <h3 className="font-semibold text-2xl text-cyan-950">€ {cost}</h3>
-          <p className="text-sm font-semibold text-cyan-800">
+          <h3 className="font-semibold text-2xl text-sky-950">€ {cost}</h3>
+          <p className="text-sm font-semibold text-sky-800">
             Date: {validityDate}
           </p>
-          {isDisabled && <p className="text-xs text-rose-600">This event has already occurred</p>}
+          {isDisabled && (
+            <p className="text-xs text-rose-600">
+              This event has already occurred
+            </p>
+          )}
           <div>
             <Select
               onValueChange={handleValueChange}

@@ -16,6 +16,7 @@ const cartSlice = createSlice({
     addToCart(state, action) {
       const { productId, quantity } = action.payload;
       const existingItemIndex = state.findIndex(item => item.productId === productId);
+      if(quantity <= 0) throw new Error(`You can't add 0 units of this product.`);
       
        if (existingItemIndex !== -1) {
         const existingItem = state[existingItemIndex];
@@ -43,5 +44,5 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addToCart, removeFromCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;

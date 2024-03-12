@@ -7,53 +7,53 @@ export default function OrderEvents() {
 const {order, suborder, handleOrderChange, handleSuborderChange} = useOrderEvents()
 
   return (
-    <div>
+    <div className="flex flex-row justify-center items-center sm:items-start sm:flex-col">
     <RadioGroup
       value={order}
-      className="h-40 pr-5 flex flex-col"
+      className="sm:h-32 pr-5 flex flex-col sm:border-b mb-5 border-sky-100"
       onValueChange={handleOrderChange}
     >
       <p>Order events by...</p>
       <div className="flex items-center space-x-2">
         <RadioGroupItem
           value="name"
-          id="r1"
+          id="name"
         />
-        <Label htmlFor="r1">Name</Label>
+        <Label htmlFor="name">Name</Label>
       </div>
       <div className="flex items-center space-x-2">
         <RadioGroupItem
           value="description"
-          id="r2"
+          id="description"
         />
-        <Label htmlFor="r2">Description</Label>
+        <Label htmlFor="description">Description</Label>
       </div>
       <div className="flex items-center space-x-2">
         <RadioGroupItem
           value="validityDate"
-          id="r3"
+          id="validityDate"
         />
-        <Label htmlFor="r3">Date</Label>
+        <Label htmlFor="validityDate">Date</Label>
       </div>
     </RadioGroup>
     <RadioGroup
       value={suborder}
-      className="h-40 pr-5 flex flex-col"
+      className="sm:h-40 pr-5 flex flex-col"
       onValueChange={handleSuborderChange}
     >
       <div className="flex items-center space-x-2">
         <RadioGroupItem
           value="asc"
-          id="r1"
+          id="asc"
         />
-        <Label htmlFor="r1">Asc</Label>
+        <Label htmlFor="asc">Asc</Label>
       </div>
       <div className="flex items-center space-x-2">
         <RadioGroupItem
           value='desc'
-          id="r2"
+          id="desc"
         />
-        <Label htmlFor="r2">Desc</Label>
+        <Label htmlFor="desc">Desc</Label>
       </div>
     </RadioGroup>
     </div>

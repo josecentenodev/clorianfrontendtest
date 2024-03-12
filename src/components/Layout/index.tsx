@@ -1,20 +1,19 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 import NavBar from "../Navbar";
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/ui/toaster";
 
 interface PropsLayout {
-    children?: ReactNode;
+  children?: ReactNode;
 }
 
-const Layout = ({children}: PropsLayout) => {
-    
-    return (
-        <>
-        <NavBar />
-        <div className='container'>{children}</div>
-        <Toaster />
-        </>
-    )
-}
+const Layout = ({ children }: PropsLayout) => {
+  return (
+    <>
+      <NavBar />
+      <div className="container">{children}</div>
+      <Toaster />
+    </>
+  );
+};
 
-export default Layout
+export default Layout;
