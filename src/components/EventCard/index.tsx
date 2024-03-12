@@ -1,4 +1,6 @@
 import useCart from "@/hooks/useCart";
+import { isBefore, parseISO } from "date-fns";
+import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import {
   Card,
@@ -36,8 +38,20 @@ const EventCard = ({
 }: Event) => {
   const { handleAddToCart, handleValueChange } = useCart(id, name);
 
+  const [isDisabled, setIsDisabled] = useState(true);
+
+
+  useEffect(() => {
+    const currentDateISO = new Date().toISOString();
+    const eventDateISO = new Date(validityDate).toISOString();
+    setIsDisabled(isBefore(parseISO(eventDateISO), parseISO(currentDateISO)));
+  }, []);
+
   return (
-    <Card id={`${id}`} className='break-inside-avoid'>
+    <Card
+      id={`${id}`}
+      className="break-inside-avoid"
+    >
       <CardHeader>
         <img
           src={imageUrl}
@@ -53,8 +67,12 @@ const EventCard = ({
           <p className="text-sm font-semibold text-cyan-800">
             Date: {validityDate}
           </p>
+          {isDisabled && <p className="text-xs text-rose-600">This event has already occurred</p>}
           <div>
-            <Select onValueChange={handleValueChange}>
+            <Select
+              onValueChange={handleValueChange}
+              disabled={isDisabled}
+            >
               <SelectTrigger>
                 <SelectValue placeholder="Select the amount" />
               </SelectTrigger>
@@ -68,7 +86,12 @@ const EventCard = ({
             </Select>
           </div>
         </div>
-        <Button onClick={handleAddToCart}>Add to cart</Button>
+        <Button
+          onClick={handleAddToCart}
+          disabled={isDisabled}
+        >
+          Add to cart
+        </Button>
       </CardFooter>
     </Card>
   );
