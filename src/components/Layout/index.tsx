@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import NavBar from "../Navbar";
+import NavBar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster";
 
 interface PropsLayout {

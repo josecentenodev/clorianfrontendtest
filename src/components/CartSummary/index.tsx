@@ -30,11 +30,11 @@ const CartSummary = () => {
       <h2 className="text-xl text-indigo-900 font-semibold">Order Summary</h2>
       <div className="flex flex-col h-full text-indigo-800">
         <div className="flex justify-between py-2 border-b">
-          <h4>Subtotal</h4>
+          <h3>Subtotal</h3>
           <p>€ {subtotal}</p>
         </div>
         <div className="flex justify-between py-2 border-b">
-          <h4>Tax estimate</h4>
+          <h3>Tax estimate</h3>
           <p>€ {subtotalWithTaxes}</p>
         </div>
       </div>

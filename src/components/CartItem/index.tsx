@@ -22,8 +22,10 @@ const CartItem = ({
 }: CartEvent) => {
   const { handleRemoveFromCart } = useCart(id, name);
 
+  const subtotal = quantity * cost
+
   return (
-    <div className="flex xl:w-[700px] border-l-4 border-l-sky-500">
+    <article className="flex xl:w-[700px] border-l-4 border-l-sky-500">
       <div className="h-52 w-52 flex-shrink-0 overflow-hidden">
         <img
           src={imageUrl}
@@ -45,12 +47,12 @@ const CartItem = ({
             <p className="text-sky-800">Tickets: {quantity}</p>
 
             <p className="self-end font-semibold text-sky-900">
-              Total: € {quantity * cost}
+              Total: € {subtotal}
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
