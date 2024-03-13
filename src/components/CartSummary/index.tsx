@@ -26,7 +26,7 @@ const CartSummary = () => {
   };
 
   return (
-    <div className="flex-1 flex flex-col border h-80 rounded-md p-5 w-96 xl:max-w-[500px]">
+    <div className="flex-1 flex flex-col border h-80 rounded-md p-5 w-96 xl:max-w-[500px] animate-slide-in-right">
       <h2 className="text-xl text-indigo-900 font-semibold">Order Summary</h2>
       <div className="flex flex-col h-full text-indigo-800">
         <div className="flex justify-between py-2 border-b">
