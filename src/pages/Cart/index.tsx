@@ -6,7 +6,7 @@ const Cart = () => {
   const { cartListtoEvents } = useCart();
 
   return (
-    <>
+    <main className="min-h-[39rem]">
       <h1 className="text-4xl text-center text-sky-900 py-20 animate-slide-in-top">
         Shopping Cart
       </h1>
@@ -14,7 +14,7 @@ const Cart = () => {
         <CartList events={cartListtoEvents} />
         <CartSummary />
       </div>
-    </>
+    </main>
   );
 };
 

@@ -17,7 +17,7 @@ interface ListOfEventsProps {
 const ListOfEvents: React.FC<ListOfEventsProps> = ({ events }) => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 animate-slide-in-bottom">
-      {events.map((event) => (
+      {events?.map((event) => (
         <EventCard
           key={event.id}
           id={event.id}

@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "@/redux/cartSlice";
 import { useToast } from "@/components/ui/use-toast";
-import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 
 interface CartItem {
