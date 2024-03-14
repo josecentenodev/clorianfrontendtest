@@ -7,7 +7,7 @@ export default function OrderEvents() {
 const {order, suborder, handleOrderChange, handleSuborderChange} = useOrderEvents()
 
   return (
-    <div className="flex flex-row justify-center items-center sm:items-start sm:flex-col">
+    <aside className="flex flex-row justify-center items-center sm:items-start sm:flex-col">
     <RadioGroup
       value={order}
       className="sm:h-32 pr-5 flex flex-col sm:border-b mb-5 border-sky-100"
@@ -56,6 +56,6 @@ const {order, suborder, handleOrderChange, handleSuborderChange} = useOrderEvent
         <Label htmlFor="desc">Desc</Label>
       </div>
     </RadioGroup>
-    </div>
+    </aside>
   );
 }

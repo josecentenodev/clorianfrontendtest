@@ -8,10 +8,10 @@ interface ListOfEventsProps {
 
 const CartList: React.FC<ListOfEventsProps> = ({ events }) => {
   return (
-    <div className="flex flex-col justify-start items-start gap-y-12 animate-slide-in-left">
+    <section className="flex flex-col justify-start items-start gap-y-12 animate-slide-in-left">
       {events.map((event) => 
         <CartItem key={event.id} id={event.id} name={event.name} description={event.description} imageUrl={event.imageUrl} altImg={event.altImg} cost={event.cost} quantity={event.quantity}/>)}
-    </div>
+    </section>
   );
 };
 
