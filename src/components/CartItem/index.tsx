@@ -1,15 +1,6 @@
 import useCart from "@/hooks/useCart";
 import { Button } from "../ui/button";
-
-interface CartEvent {
-  id: number;
-  name: string;
-  description: string;
-  imageUrl: string;
-  altImg: string;
-  cost: number;
-  quantity: number;
-}
+import { CartEvent } from "@/types";
 
 const CartItem = ({
   id,

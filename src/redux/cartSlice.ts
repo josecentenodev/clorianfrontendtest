@@ -1,9 +1,7 @@
+import { CartItem } from '@/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface CartItem {
-  productId: number;
-  quantity: number;
-}
+
 
 const MAX_QUANTITY_PER_PRODUCT = 10;
 

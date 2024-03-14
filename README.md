@@ -58,6 +58,11 @@ This is a React web application developed for the Clorian frontend test. It disp
 
 5. Open [http://localhost:5173](http://localhost:5173) to view the app in your browser.
 
+### Note on Initial Cart State
+
+For the sake of time and practicality, the initial state of the cart is pre-set with 3 products. This is done to facilitate testing and demonstration purposes.
+
+
 ## Running Tests
 
 To run the tests, use the following command:

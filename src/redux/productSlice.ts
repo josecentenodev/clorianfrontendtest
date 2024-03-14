@@ -1,26 +1,8 @@
 import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
 import fetchProducts  from "@/services/fetchProducts";
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  validityDate: string;
-  cost: number;
-  imageUrl: string;
-  altImg: string;
-}
+import { Product, ProductState, SortOrder } from "@/types";
 
-export interface ProductState {
-  isLoading: boolean;
-  error: boolean;
-  products: Product[];
-  filteredProducts: Product[];
-}
 
-interface SortOrder {
-  order: string;
-  suborder: string;
-}
 
 const initialState: ProductState = {
   isLoading: true,

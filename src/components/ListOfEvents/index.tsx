@@ -1,17 +1,8 @@
+import { Product } from "@/types";
 import EventCard from "../EventCard";
 
-interface Event {
-  id: number;
-  name: string;
-  description: string;
-  imageUrl: string;
-  altImg: string;
-  validityDate: string;
-  cost: number;
-}
-
 interface ListOfEventsProps {
-  events: Event[];
+  events: Product[];
 }
 
 const ListOfEvents: React.FC<ListOfEventsProps> = ({ events }) => {

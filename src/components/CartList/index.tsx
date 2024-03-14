@@ -1,15 +1,6 @@
 import * as React from "react";
 import CartItem from "../CartItem";
-
-interface CartEvent {
-  id: number;
-  name: string;
-  description: string;
-  imageUrl: string;
-  altImg: string;
-  cost: number;
-  quantity: number;
-}
+import { CartEvent } from '@/types'
 
 interface ListOfEventsProps {
   events: CartEvent[];

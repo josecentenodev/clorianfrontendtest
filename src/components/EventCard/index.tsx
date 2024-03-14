@@ -16,16 +16,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
-
-interface Event {
-  id: number;
-  name: string;
-  description: string;
-  imageUrl: string;
-  altImg: string;
-  validityDate: string;
-  cost: number;
-}
+import { Product } from "@/types";
 
 const EventCard = ({
   id,
@@ -35,7 +26,7 @@ const EventCard = ({
   altImg,
   validityDate,
   cost,
-}: Event) => {
+}: Product) => {
   const { handleAddToCart, handleValueChange } = useCart(id, name);
 
   const [isDisabled, setIsDisabled] = useState(true);
@@ -47,9 +38,7 @@ const EventCard = ({
   }, []);
 
   return (
-    <Card
-      id={`${id}`}
-    >
+    <Card id={`${id}`}>
       <CardHeader>
         <div className="h-64 w-64 mb-5 mx-auto flex-shrink-0 overflow-hidden rounded-md border border-gray-200 flex justify-center items-center">
           <img
