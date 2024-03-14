@@ -2,7 +2,7 @@ import { cleanup, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store";
-import NavBar from "@/components/NavBar";
+import NavBar from "..";
 
 describe("NavBar component", () => {
   afterEach(cleanup);

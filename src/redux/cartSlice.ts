@@ -38,8 +38,8 @@ const cartSlice = createSlice({
         const productIdToRemove = action.payload;
         return state.filter(item => item.productId !== Number(productIdToRemove));
       },
-      clearCart(state) {
-        return state = [];
+      clearCart() {
+        return [];
       },
   },
 });

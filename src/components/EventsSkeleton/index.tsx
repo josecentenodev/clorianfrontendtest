@@ -2,11 +2,11 @@ import { Skeleton } from "@/components/ui/skeleton"
  
 const EventSkeleton = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
-    <div className="flex flex-col space-y-3 w-[416px] h-[520px]">
-      <Skeleton className="h-[300px] w-[416px] rounded-xl" />
+    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 w-full">
+    <div className="flex flex-col space-y-3 w-full max-w-[416px] h-[520px]">
+      <Skeleton className="h-[300px] max-w-[416px] rounded-xl" />
       <div className="space-y-2">
-        <Skeleton className="h-4 w-[416px]" />
+        <Skeleton className="h-4 max-w-[416px]" />
         <Skeleton className="h-4 w-[300px]" />
         <Skeleton className="h-4 w-[300px]" />
         <Skeleton className="h-4 w-[300px]" />
@@ -17,10 +17,10 @@ const EventSkeleton = () => {
       </div>
     </div>
 
-    <div className="flex flex-col space-y-3 w-[416px] h-[520px]">
-      <Skeleton className="h-[300px] w-[416px] rounded-xl" />
+    <div className="flex flex-col space-y-3 w-full max-w-[416px] h-[520px]">
+      <Skeleton className="h-[300px] max-w-[416px] rounded-xl" />
       <div className="space-y-2">
-        <Skeleton className="h-4 w-[416px]" />
+        <Skeleton className="h-4 max-w-[416px]" />
         <Skeleton className="h-4 w-[300px]" />
         <Skeleton className="h-4 w-[300px]" />
         <Skeleton className="h-4 w-[300px]" />
@@ -31,10 +31,10 @@ const EventSkeleton = () => {
       </div>
     </div>
 
-    <div className="flex flex-col space-y-3 w-[416px] h-[520px]">
-      <Skeleton className="h-[300px] w-[416px] rounded-xl" />
+    <div className="flex flex-col space-y-3 w-full max-w-[416px] h-[520px]">
+      <Skeleton className="h-[300px] max-w-[416px] rounded-xl" />
       <div className="space-y-2">
-        <Skeleton className="h-4 w-[416px]" />
+        <Skeleton className="h-4 max-w-[416px]" />
         <Skeleton className="h-4 w-[300px]" />
         <Skeleton className="h-4 w-[300px]" />
         <Skeleton className="h-4 w-[300px]" />
@@ -45,10 +45,10 @@ const EventSkeleton = () => {
       </div>
     </div>
 
-    <div className="flex flex-col space-y-3 w-[416px] h-[520px]">
-      <Skeleton className="h-[300px] w-[416px] rounded-xl" />
+    <div className="flex flex-col space-y-3 w-full max-w-[416px] h-[520px]">
+      <Skeleton className="h-[300px] max-w-[416px] rounded-xl" />
       <div className="space-y-2">
-        <Skeleton className="h-4 w-[416px]" />
+        <Skeleton className="h-4 max-w-[416px]" />
         <Skeleton className="h-4 w-[300px]" />
         <Skeleton className="h-4 w-[300px]" />
         <Skeleton className="h-4 w-[300px]" />
@@ -59,10 +59,10 @@ const EventSkeleton = () => {
       </div>
     </div>
 
-    <div className="flex flex-col space-y-3 w-[416px] h-[520px]">
-      <Skeleton className="h-[300px] w-[416px] rounded-xl" />
+    <div className="flex flex-col space-y-3 w-full max-w-[416px] h-[520px]">
+      <Skeleton className="h-[300px] max-w-[416px] rounded-xl" />
       <div className="space-y-2">
-        <Skeleton className="h-4 w-[416px]" />
+        <Skeleton className="h-4 max-w-[416px]" />
         <Skeleton className="h-4 w-[300px]" />
         <Skeleton className="h-4 w-[300px]" />
         <Skeleton className="h-4 w-[300px]" />
@@ -73,10 +73,10 @@ const EventSkeleton = () => {
       </div>
     </div>
 
-    <div className="flex flex-col space-y-3 w-[416px] h-[520px]">
-      <Skeleton className="h-[300px] w-[416px] rounded-xl" />
+    <div className="flex flex-col space-y-3 w-full max-w-[416px] h-[520px]">
+      <Skeleton className="h-[300px] max-w-[416px] rounded-xl" />
       <div className="space-y-2">
-        <Skeleton className="h-4 w-[416px]" />
+        <Skeleton className="h-4 max-w-[416px]" />
         <Skeleton className="h-4 w-[300px]" />
         <Skeleton className="h-4 w-[300px]" />
         <Skeleton className="h-4 w-[300px]" />

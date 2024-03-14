@@ -5,7 +5,6 @@ import ListOfEvents from "@/components/ListOfEvents";
 import OrderEvents from "@/components/OrderEvents";
 import SearchInput from "@/components/SearchInput";
 import { useAppDispatch, useAppSelector } from "@/hooks/useRedux";
-import { Skeleton } from "@/components/ui/skeleton";
 import EventSkeleton from "@/components/EventsSkeleton";
 
 const Home = () => {
