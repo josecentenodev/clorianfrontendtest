@@ -12,9 +12,7 @@ interface Product {
 
 const fetchProducts = (): Promise<Product[]> => {
   return new Promise((resolve) => {
-    setTimeout(() => {
       resolve(events);
-    }, 100);
   });
 };
 
