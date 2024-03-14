@@ -1,14 +1,11 @@
 import App from "@/App";
 import {
-  act,
   cleanup,
-  fireEvent,
   render,
   screen,
   waitFor,
 } from "@testing-library/react";
-import { vi } from "vitest";
-import userEvent from '@testing-library/user-event'
+import userEvent from "@testing-library/user-event";
 
 describe("App test", () => {
   beforeEach(async () => {
@@ -38,16 +35,14 @@ describe("App test", () => {
   });
 
   test("should filter products when user type on SearchInput", async () => {
-    const input = screen.getByRole('textbox');
-    
+    const input = screen.getByRole("textbox");
 
-    await userEvent.type(input, 'Broadway Nights')
+    await userEvent.type(input, "Broadway Nights");
 
     const buttons = screen.getAllByText("Add to cart");
 
-    expect(buttons.length).toBe(1)
+    expect(buttons.length).toBe(1);
   });
-
 
 
 });
