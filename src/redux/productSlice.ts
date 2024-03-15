@@ -25,7 +25,7 @@ const productSlice = createSlice({
     })
     builder.addCase(fetchAsyncProducts.fulfilled, (state, action: PayloadAction<Product[]>) => {
       state.isLoading = false
-      state.products = action.payload
+      state.products = action.payload.sort((a, b) => a.name.localeCompare(b.name));
       state.filteredProducts = action.payload
     })
     builder.addCase(fetchAsyncProducts.rejected, (state) => {
